@@ -10,8 +10,8 @@ import static java.util.stream.Collectors.toList;
 /**
  * 截取
  */
-public class ListStreamLimitAndSkip
-{
+public class ListStreamLimitAndSkip {
+
     public static void main(String[] args) {
         // 截取前三个
         List<Person> limitList =  PersonList.getPersonList().stream().limit(3).collect(toList());

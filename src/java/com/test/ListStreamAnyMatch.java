@@ -7,7 +7,7 @@ package com.test;
 public class ListStreamAnyMatch {
 
     public static void main(String[] args) {
-        //是否存在一个 年龄等于10的
+        // 是否存在一个 年龄等于10的
         boolean f = PersonList.getPersonList().stream().anyMatch(person -> person.getPersonAge()==10);
         System.out.println(f);
     }

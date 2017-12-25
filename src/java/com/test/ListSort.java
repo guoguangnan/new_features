@@ -17,6 +17,7 @@ public class ListSort {
     public static void main(String[] args) {
 
         List<Person> list= PersonList.getPersonList();
+        // 排序
         list.sort( ( e1, e2 ) -> e1.getPersonAge().compareTo(e2.getPersonAge()));
 
         list.forEach(p->{

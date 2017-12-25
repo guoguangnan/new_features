@@ -17,7 +17,8 @@ public class ListStreamMap {
 
     public static void main(String[] args) {
 
-        //java 1.8
+        // java 1.8
+        // 将数组进行转换
         List<PersonVo> list = PersonList.getPersonList().stream().map(p->{
             PersonVo vo = new PersonVo();
             vo.setPersonAge(p.getPersonAge());
@@ -26,6 +27,7 @@ public class ListStreamMap {
             return vo;
         }).collect(toList());
 
+        // 循环输出
         list.forEach(p ->{
             System.out.println(p.getPersonId()+" "+p.getPersonAge()+" "+p.getPersonName());
         });
@@ -35,12 +37,13 @@ public class ListStreamMap {
         p.setPersonId(1L);
         p.setPersonName("Tom");
         p.setPersonAge(18);
-
+        // 单个实体进行转换
         PersonVo v = Optional.of(p).map(person -> {
             PersonVo vo = new PersonVo();
             vo.setPersonName(person.getPersonName());
             return vo;
         }).orElseThrow(()->{
+            //异常处理
             return new RuntimeException();
         });
 

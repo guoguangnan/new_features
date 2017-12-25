@@ -19,7 +19,7 @@ public class ListForEach
     public static void main(String[] args)
     {
        List<Person> list= PersonList.getPersonList();
-
+        // 循环输出
         list.forEach(p->{
             System.out.println(p.getPersonId()+" "+p.getPersonName()+" "+p.getPersonAge());
         });

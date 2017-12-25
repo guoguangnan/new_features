@@ -6,8 +6,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 
+/**
+ * 人工具类
+ */
 public class PersonList {
-
+    /**
+     * 初始化数组
+     * @return List
+     */
     public static List<Person> getPersonList() {
 
         List<Person> list  = new ArrayList<>();

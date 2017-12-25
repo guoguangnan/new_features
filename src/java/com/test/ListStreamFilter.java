@@ -15,7 +15,7 @@ public class ListStreamFilter {
 
     public static void main(String[] args) {
 
-        //java 1.8
+        // 将数组中年龄小于15的人 生成新的数组
         List<Person> list = PersonList.getPersonList().stream().filter(person -> person.getPersonAge()<15).collect(
             toList());
 

@@ -8,13 +8,14 @@ java1.8新特性
 Java 8允许我们给接口添加一个非抽象的方法实现，只需要使用 default关键字即可，这个特征又叫做扩展方法，示例如下：
 
 复制代码 代码如下:
-
+<pre><code>
 interface Formula {
     double calculate(int a);
     default double sqrt(int a) {
         return Math.sqrt(a);
     }
 }
+</code></pre>
 
 
 Formula接口在拥有calculate方法之外同时还定义了sqrt方法，实现了Formula接口的子类只需要实现一个calculate方法，默认方法sqrt将在子类上可以直接使用。
@@ -102,23 +103,24 @@ System.out.println(converted);   // 123
 Java 8 允许你使用 :: 关键字来传递方法或者构造函数引用，上面的代码展示了如何引用一个静态方法，我们也可以引用一个对象的方法：
 复制代码 代码如下:
 
- converter = something::startsWith;
+converter = something::startsWith;
 String converted = converter.convert("Java");
 System.out.println(converted);    // "J"
 
 接下来看看构造函数是如何使用::关键字来引用的，首先我们定义一个包含多个构造函数的简单类：
 复制代码 代码如下:
-
 class Person {
+
     String firstName;
     String lastName;
     Person() {}
-
     Person(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
     }
 }
+
+
 
 
 接下来我们指定一个用来创建Person对象的对象工厂接口：

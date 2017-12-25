@@ -19,7 +19,7 @@ public class ListStreamPeek
                       .skip(2)   //移除前两个（2，4）  6,8,10,12,14,16,18,20
                       .limit(4)  //保留四个 6,8,10,12
                       .sum(); //累加
-
+        //当然 还有max、count、average、min等方法
         System.out.println("sum is:"+ sum);
     }
 }

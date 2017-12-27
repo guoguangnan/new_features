@@ -33,6 +33,11 @@ public class ListStreamMap {
         });
 
 
+        //获取列表所有的personId 并且成为数组。
+        List<Long> keyList = list.stream().map(PersonVo::getPersonId).collect(toList());
+
+        //IteratorUtils.collectKey(list,PersonVo::getPersonId);
+
         Person p = new Person();
         p.setPersonId(1L);
         p.setPersonName("Tom");
@@ -49,3 +54,37 @@ public class ListStreamMap {
 
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
